@@ -146,6 +146,7 @@ main:hover {
   text-align: center;
   width: 100%;
   padding: 10px;
+  height: max-content;
 }
 .destaques h3 {
   font-size: 27px;
@@ -159,8 +160,12 @@ main:hover {
 .book {
   height: 250px;
 }
+
 .book img {
   height: 100%;
+}
+.book h3{
+  display: none;
 }
 @keyframes book-animation-hover {
   to {
@@ -169,18 +174,16 @@ main:hover {
 }
 .book:hover {
   animation: book-animation-hover 500ms forwards;
-}
+}/*
 .galeria-fotos {
   margin: var(--margin);
   display: flex;
   gap: 20px;
-  width: 100%;
+  width: 1000px;
   height: 500px;
 
 }
 .galeria-fotos img{
-    height: 100px;
-    width: 100px;
     object-fit: cover;
 }
 
@@ -188,13 +191,57 @@ main:hover {
     height: 100%;
   height: 100%;
 }
-.menor{
+.menor {
     height: 100%;
 }
-.image-1 {
+.image-1 img{
+  width: 500px;
   height: 100%;
 }
 
-.image-2 {
+.image-2 img{
     height: 50%;
+}*/
+.autores {
+  background-color: var(--white);
+  height: 600px;
+  margin: var(--margin);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  border-radius: var(--border);
+}
+.exposicao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+}
+.autor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 1s ;
+}
+.autor h1 {
+  display: none;
+  transition: all 1s;
+}
+.autor a img{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 115px;
+}
+.autor:hover > :not(:hover){
+  display: flex;
+}
+.exposicao:hover > :not(:hover){
+  opacity: 0.5;
+}
+.autor:hover {
+  scale: 1.1;
 }

@@ -46,6 +46,9 @@ header .pesquisa i {
   color: var(--balck);
   margin-right: 10px;
 }
+header .pesquisa input:focus {
+  outline: none;
+}
 header .pesquisa input {
   border: none;
   background: none;
