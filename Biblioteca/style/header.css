@@ -1,0 +1,68 @@
+:root {
+  --primary: #023e8a;
+  --secondary: #48cae4;
+  --white: #fafafa;
+  --balck: #191716;
+  --border: 20px;
+  --padding-lados: 60px;
+  --shadow: 0px 0px 10px #1917164f;
+  --margin: 20px 50px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border-radius: var(--border);
+  box-shadow: var(--shadow);
+  padding: 20px var(--padding-lados);
+  height: 15vh;
+  margin: var(--margin);
+  gap: 10px;
+}
+header div {
+  display: flex;
+  align-items: center;
+}
+header .logo img {
+  height: 25px;
+}
+header .pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 10px;
+  border: 2px solid var(--balck);
+  width: 300px;
+  border-radius: var(--border);
+}
+header .pesquisa i {
+  color: var(--balck);
+  margin-right: 10px;
+}
+header .pesquisa input {
+  border: none;
+  background: none;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  gap: 10px;
+}
+header nav a {
+  text-decoration: none;
+  font-size: small;
+  font-weight: 600;
+  color: var(--balck);
+}
+header .shop-cart {
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--balck);
+}
