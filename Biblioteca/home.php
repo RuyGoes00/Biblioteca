@@ -15,29 +15,7 @@
     <link rel="stylesheet" href="style/header.css" />
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img src="style/assets/BookOn - 1.png" alt="" />
-      </div>
-      <div class="pesquisa">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input
-          type="text"
-          name="search"
-          placeholder="Procure por um Livro ou Autor"
-        />
-      </div>
-      <nav>
-        <a href="home.html">Home</a>
-        <a href="catalogo.html">Estante</a>
-        <a href="#">Sobre</a>
-        <a href="#">Categorias</a>
-        <a href="#">Minha Conta</a>
-      </nav>
-      <div class="shop-cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </div>
-    </header>
+    <?php include "header.php"?>
     <section class="categorias">
       <div class="categoria" id="categoria-1">
         <img src="style/assets/Livros de romance icon.png" alt="" />

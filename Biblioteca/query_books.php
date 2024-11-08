@@ -31,9 +31,9 @@
         for ($i=0; $i < $quant_livros; $i++) { 
             
             if (isset($data['items'][$i]['volumeInfo']['imageLinks']['thumbnail'])){
-                $capa = $data['items'][$i]['volumeInfo']['imageLinks']['thumbnail'];
+                $capa = "https://books.google.com/books/publisher/content?id=$id&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE707XtYfMZb6kNCZVppyPmezOvwIY23IxFakd3IFCHrl4sNrZE2jVsA9qu5QqnT8dC11MhEaCjZbn4bdV27VlKCiyNomG8h8P3zDwIG77NTK1yTIPB_a-7PaA2BcD8TtRpwIW6wm&source=gbs_api";
                 $id = $data['items'][$i]['id'];
-                echo $capa;
+                echo $id;
                 echo "<a href='livro.php?id=$id'><img src='$capa' alt='Capa do Livro'></a>";
             }
         }
