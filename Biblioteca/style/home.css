@@ -203,12 +203,12 @@ main:hover {
     height: 50%;
 }*/
 .autores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--white);
   height: 600px;
   margin: var(--margin);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: var(--shadow);
   border-radius: var(--border);
 }
@@ -217,7 +217,19 @@ main:hover {
   align-items: center;
   justify-content: space-between;
   gap: 60px;
+  height: 100%;
 
+}
+.autores > h1{
+  font-size: x-large;
+  margin-top: 30px;
+
+}
+.row-autores{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
 }
 .autor {
   display: flex;
@@ -231,16 +243,17 @@ main:hover {
   transition: all 1s;
 }
 .autor a img{
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   object-fit: cover;
   border-radius: 115px;
 }
 .autor:hover > :not(:hover){
   display: flex;
 }
-.exposicao:hover > :not(:hover){
+.row-autores:hover > :not(:hover){
   opacity: 0.5;
+  scale: 0.9;
 }
 .autor:hover {
   scale: 1.1;
