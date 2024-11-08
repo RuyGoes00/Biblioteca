@@ -1,23 +1,12 @@
 <head>
     <link rel="stylesheet" href="style/header.css">
 </head>
-<?php
-if ($_GET) {
-    $search = $_GET['search'];
-
-    if (!empty($search)) {
-        header("location:catalogo.php");
-    }
-}
-
-
-?>
 <header>
     <div class="logo">
         <img src="style/assets/BookOn - 1.png" alt="Logo do BookOn" />
     </div>
     <div class="pesquisa">
-        <form action="<?= $_SERVER['PHP_SELF']?>" method="get" style="display: flex; width: 300px;">
+        <form action="catalogo.php" method="get" style="display: flex; width: 300px;">
 
             <button type="submit" style="border: none; background: none; cursor: pointer;">
                 <i class="fa-solid fa-magnifying-glass"></i>
