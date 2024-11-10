@@ -75,9 +75,9 @@
                                 $isbn = "indefinida";
                             }
                             if (isset($dados['items'][$i]['volumeInfo']['imageLinks'])) {
-                                $capa = $dados['items'][$i]['volumeInfo']['imageLinks']['smallThumbnail'];
+                                $capa = $dados['items'][$i]['volumeInfo']['imageLinks']['thumbnail'];
                                 $objeto = '<div class="livro">
-                <a href="produto.php?id'.$id.'"><img
+                <a href="produto.php?id='.$id.'"><img
                         src="' . $capa . '"
                         alt="Capa do livro"  style="width: 250px;"/></a>
                 <div class="info-livro" style= "width: 250px">
