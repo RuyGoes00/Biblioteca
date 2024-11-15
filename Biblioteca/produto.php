@@ -20,53 +20,54 @@
 
   if ($_GET['id']) {
     $id = $_GET['id'];
-    $page = file_get_contents("https://www.googleapis.com/books/v1/volumes?q=$id");
+    $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$id");
+
     if (isset($page)) {
 
       $dados = json_decode($page, true);
       if (isset($dados)) {
-        if (isset($dados['items'][0]['volumeInfo']['title'])) {
-          $nome = $dados['items'][0]['volumeInfo']['title'];
+        if (isset($dados['volumeInfo']['title'])) {
+          $nome = $dados['volumeInfo']['title'];
         } else {
           $nome = "indefinida";
         }
-        if (isset($dados['items'][0]['volumeInfo']['publishedDate'])) {
-          $dataLançamento = $dados['items'][0]['volumeInfo']['publishedDate'];
+        if (isset($dados['volumeInfo']['publishedDate'])) {
+          $dataLançamento = $dados['volumeInfo']['publishedDate'];
         } else {
           $dataLançamento = "indefinida";
         }
 
-        if (isset($dados['items'][0]['volumeInfo']['authors'][0])) {
-          $autor = $dados['items'][0]['volumeInfo']['authors'][0];
+        if (isset($dados['volumeInfo']['authors'][0])) {
+          $autor = $dados['volumeInfo']['authors'][0];
         } else {
           $autor = "indefinida";
         }
 
-        if (isset($dados['items'][0]['volumeInfo']['industryIdentifiers'][0]['identifier'])) {
-          $isbn = $dados['items'][0]['volumeInfo']['industryIdentifiers'][0]['identifier'];
+        if (isset($dados['volumeInfo']['industryIdentifiers'][0]['identifier'])) {
+          $isbn = $dados['volumeInfo']['industryIdentifiers'][0]['identifier'];
         } else {
           $isbn = "indefinida";
         }
-        if (isset($dados['items'][0]['volumeInfo']['publisher'])) {
-          $editora = $dados['items'][0]['volumeInfo']['publisher'];
+        if (isset($dados['volumeInfo']['publisher'])) {
+          $editora = $dados['volumeInfo']['publisher'];
         } else {
           $editora = "indefinida";
         }
-        if (isset($dados['items'][0]['volumeInfo']['description'])) {
-          $descricao = $dados['items'][0]['volumeInfo']['description'];
+        if (isset($dados['volumeInfo']['description'])) {
+          $descricao = $dados['volumeInfo']['description'];
         } else {
           $descricao = "indefinida";
         }
-        if (isset($data['items'][0]['volumeInfo']['imageLinks']['thumbnail'])) {
-          $capa = $data['items'][0]['volumeInfo']['imageLinks']['thumbnail'];
-          $id = $data['items'][0]['id'];
+        if (isset($data['volumeInfo']['imageLinks']['thumbnail'])) {
+          $capa = $data['volumeInfo']['imageLinks']['thumbnail'];
+          $id = $data['id'];
           echo $capa;
           echo "<a href='livro.php?id=$id'><img src='$capa' alt='Capa do Livro'></a>";
         }
       }
     }
   }
-    // botão de favorito
+  // botão de favorito
 
   ?>
   <header>
@@ -93,7 +94,7 @@
   </header>
   <section class="produto">
     <div class="img-livro">
-      <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" alt=""/>
+      <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" alt="" />
     </div>
     <article>
       <h1><?= $nome ?></h1>
@@ -112,16 +113,15 @@
           <p class="nome-autor"><?= $autor ?></p>
           <p class="nome-editora"><?= $editora ?></p>
           <p class="isbn"><?= $isbn ?></p>
-          <div class="fav">
-
-            <button ><i class="fa-regular fa-heart"></i> Adicionar à Minha Estante</button>
-          </div>
+          <form action="" method="get">
+            <a href="add_favorito.php?id=<?= $id ?>"><i class="fa-solid fa-heart"></i>Adicionar a minha estante</a>
+          </form>
         </div>
       </div>
       <div class="paragraf">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sit, omnis laboriosam delectus fugiat saepe quibusdam minus modi nesciunt eos hic possimus officia nam, blanditiis corrupti expedita obcaecati accusantium culpa.</p>
       </div>
-      <div class="buttons" >
+      <div class="buttons">
         <button name="vizualização" style="text-align: center;"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
       </div>
     </div>
