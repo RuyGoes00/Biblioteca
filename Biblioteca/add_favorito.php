@@ -9,8 +9,6 @@
     <?php 
     
         include "config.php";
-
-        $id = "";
     
     ?>
 </body>

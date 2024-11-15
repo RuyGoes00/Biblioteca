@@ -60,7 +60,7 @@ header nav {
 }
 header nav a {
   text-decoration: none;
-  font-size: small;
+  font-size: medium;
   font-weight: 600;
   color: var(--balck);
 }

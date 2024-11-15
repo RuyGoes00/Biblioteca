@@ -19,9 +19,6 @@
   box-sizing: border-box;
   font-family: Poppins;
 }
-body{
-  background-color: var(--balck);
-}
 .categorias {
   background-color: var(--white);
   height: 150px;
