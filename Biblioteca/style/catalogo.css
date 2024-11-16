@@ -21,9 +21,6 @@
     box-sizing: border-box;
     font-family: Poppins;
 }
-body{
-    background-color: #023e8a;
-}
 .catalogo-card {
     display: flex;
     align-items: center;

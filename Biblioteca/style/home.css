@@ -46,6 +46,7 @@
   align-items: center;
 }
 .categoria:hover {
+  cursor: pointer;
   animation: pulse 400ms forwards;
 }
 
@@ -157,23 +158,71 @@ main:hover {
   width: 100%;
   padding: 10px;
 }
-.book {
-  height: 250px;
+.livro {
+  display: flex;
 }
 
-.book img {
-  height: 100%;
+.livro img {
+  width: 400px;
+  transition: all 1s ease-in-out;
+  box-shadow: var(--shadow);
 }
-.book h3{
+
+.info-livro {
+  position: absolute;
   display: none;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: black;
+  padding: 10px;
+  color: white;
+  width: 150px;
+  animation: pulse 1s forwards;
+  cursor: pointer;
 }
-@keyframes book-animation-hover {
+
+.info-livro h3 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.info-livro h4 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.info-livro h5 {
+  font-size: 10px;
+}
+
+@keyframes reveal-info-livro {
+  from {
+      transform: translateY(-5px);
+  }
+
   to {
-    scale: 0.95;
+      transform: translateY(0px);
   }
 }
-.book:hover {
-  animation: book-animation-hover 500ms forwards;
+
+@keyframes book-animation-hover {
+  to {
+      scale: 0.95;
+  }
+}
+
+.livro:hover img {
+  animation: book-animation-hover 1s forwards ease-in-out;
+}
+
+.livro .info-livro:hover {
+  display: flex;
+}
+
+.livro:hover> :not(:hover) {
+  display: flex;
+  animation: reveal-info-livro 1s ease-in-out;
+
 }/*
 .galeria-fotos {
   margin: var(--margin);

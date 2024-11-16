@@ -16,13 +16,17 @@
         </form>
     </div>
     <nav>
-        <a href="home.html">Home</a>
-        <a href="catalogo.php ">Estante</a>
-        <a href="#">Sobre</a>
-        <a href="#">Categorias</a>
-        <a href="#">Minha Conta</a>
+        <a href="home.php">Home</a>
+        <a href="catalogo.php ">Catálogo</a>
+        <a href="sobre.php">Sobre</a>
+        <a href="Conta.php">Minha Conta</a>
     </nav>
     <div class="shop-cart">
-        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-solid fa-book" onclick="minhaEstante()"></i>
     </div>
+    <script>
+        function minhaEstante(){
+            document.location.href = "minhaEstante.php"
+        }
+    </script>
 </header>

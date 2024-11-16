@@ -33,7 +33,8 @@
             if (isset($data['items'][$i]['volumeInfo']['imageLinks']['thumbnail'])){
                 $capa = $data['items'][$i]['volumeInfo']['imageLinks']['thumbnail'];
                 $id = $data['items'][$i]['id'];
-                echo $capa;
+                echo $id;
+                #echo $capa;
                 echo "<a href='livro.php?id=$id'><img src='$capa' alt='Capa do Livro'></a>";
             }
         }

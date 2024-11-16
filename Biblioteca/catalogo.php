@@ -49,7 +49,6 @@
                         for ($i = 0; $i < $quant_livros; $i++) {
                             if (isset($dados['items'][$i]['id'])) {
                                 $id = $dados['items'][$i]['id'];
-                                echo $id;
                             } else {
                                 $id = "indefinida";
                             }
@@ -91,10 +90,8 @@
                             
                         }
                     } else {
-                        echo "1";
                     }
                 } else {
-                    echo "1";
                 }
             } else {
                 $erro = "Não foi encontrado";
