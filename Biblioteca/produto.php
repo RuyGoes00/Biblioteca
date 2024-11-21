@@ -114,7 +114,16 @@
           <p class="nome-editora"><?= $editora ?></p>
           <p class="isbn"><?= $isbn ?></p>
           <form action="" method="get">
-            <a href="add_favorito.php?id=<?= $id ?>"><i class="fa-solid fa-heart"></i>Adicionar a minha estante</a>
+            <button onclick="redirectAddFav()"><i class="fa-solid fa-heart"></i>Adicionar a minha Estante</button>
+            <script>
+              function redirectAddFav(){
+                document.location.href = "add_favorito.php?id=<?= $id ?>";
+
+              }
+              function visualizacao(){
+                document.location.href = "bookView.php?isbn=<?=$isbn?>";
+              }
+            </script>
           </form>
         </div>
       </div>
@@ -122,7 +131,7 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sit, omnis laboriosam delectus fugiat saepe quibusdam minus modi nesciunt eos hic possimus officia nam, blanditiis corrupti expedita obcaecati accusantium culpa.</p>
       </div>
       <div class="buttons">
-        <button name="vizualização" style="text-align: center;"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
+        <button name="vizualização" style="text-align: center;" onclick="visualizacao()"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
       </div>
     </div>
   </section>

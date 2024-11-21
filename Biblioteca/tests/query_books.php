@@ -13,15 +13,37 @@
     <div style="display: flex; flex-wrap: wrap; margin: 30px;">
 
         <?php
-        if ($_POST){
+        $books = [];
+        function getBook($pesquisa){
+    $livro_url = strtolower(urlencode($pesquisa));
+    $page = file_get_contents("https://www.googleapis.com/books/v1/volumes?q=$livro_url");
+    $data = json_decode($page, true);
+    if (isset($data)){
+        $quant_livros = count($data["items"]);
+        #var_dump($data);
+        for ($i=0; $i < $quant_livros; $i++) { 
+            if (isset($data['items'][$i]['volumeInfo']['imageLinks']['thumbnail'])){
+                $capa = $data['items'][$i]['volumeInfo']['imageLinks']['thumbnail'];
+                $id = $data['items'][$i]['id'];
+                return $books = [
+                    'capa' => $capa,
+                    'id' => $id
+                ];
+            }
+            
+        }}
+    };
+        #echo $capa;
+        echo "<a href='livro.php?id=".$books['capa']."><img src=".$books['id']." alt='Capa do Livro'></a>";
+        /*if ($_POST){
 
             $pesquisa = $_POST['search'];
             
             if (isset($pesquisa)){
-    /*
+    
     $toUrl = strtolower(urldecode($pesquisa));
     $require = file_get_contents("https://www.googleapis.com/books/v1/volumes?q=$toUrl");
-    $biblioteca = json_decode($require, true);*/
+    $biblioteca = json_decode($require, true);
     $livro_url = strtolower(urlencode($pesquisa));
     $page = file_get_contents("https://www.googleapis.com/books/v1/volumes?q=$livro_url");
     $data = json_decode($page, true);
@@ -40,7 +62,7 @@
         }
     }
 }
-}
+}*/
 ?>
 </div>
 </body>

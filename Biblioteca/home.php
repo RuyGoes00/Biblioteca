@@ -85,7 +85,6 @@
         <?php
         include "config.php";
         for ($i=1; $i <=11 ; $i++) { 
-          # code...
           $query = "SELECT codigo FROM destaques where id = $i";
           
           

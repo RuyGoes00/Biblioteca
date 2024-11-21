@@ -48,7 +48,7 @@
 }
 
 .livro img {
-    width: 400px;
+    width: 200px;
     transition: all 1s ease-in-out;
     box-shadow: var(--shadow);
 }
