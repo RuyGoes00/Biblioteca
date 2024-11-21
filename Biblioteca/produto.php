@@ -107,31 +107,32 @@
     </article>
     <div class="checkout">
       <div class="infos">
-        <img src="http://books.google.com/books/content?id=LCqWEAAAQBAJ&printsec=frontcover&img=1&zoom=10&edge=curl&source=gbs_api" alt="" class="livro-mini" />
+        <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" alt="" class="livro-mini" />
         <div class="infos-mini">
           <h1><?= $nome ?></h1>
           <p class="nome-autor"><?= $autor ?></p>
           <p class="nome-editora"><?= $editora ?></p>
           <p class="isbn"><?= $isbn ?></p>
-          <form action="" method="get">
-            <button onclick="redirectAddFav()"><i class="fa-solid fa-heart"></i>Adicionar a minha Estante</button>
+          <div class="add-fav">
+
+            <button onclick="redirectAddFav()" style="padding: 10px; cursor: pointer;"><i class="fa-solid fa-heart"></i>Adicionar a minha Estante</button>
             <script>
               function redirectAddFav(){
                 document.location.href = "add_favorito.php?id=<?= $id ?>";
-
+                
               }
               function visualizacao(){
                 document.location.href = "bookView.php?isbn=<?=$isbn?>";
               }
-            </script>
-          </form>
+              </script>
+              </div>
         </div>
       </div>
       <div class="paragraf">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sit, omnis laboriosam delectus fugiat saepe quibusdam minus modi nesciunt eos hic possimus officia nam, blanditiis corrupti expedita obcaecati accusantium culpa.</p>
       </div>
       <div class="buttons">
-        <button name="vizualização" style="text-align: center;" onclick="visualizacao()"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
+        <button name="vizualização" style="text-align: center; cursor: pointer;" onclick="visualizacao()"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
       </div>
     </div>
   </section>

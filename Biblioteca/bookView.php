@@ -10,7 +10,7 @@
 
       function initialize() {
         var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
-        viewer.load('<?= $process?>');
+        viewer.load('ISBN   :9781781106587');
       }
 
       google.books.setOnLoadCallback(initialize);
@@ -20,7 +20,7 @@
     <?php 
     
     if (isset($_GET['isbn'])){
-        $isbn = $_GET['isbn'];
+        $isbn = "0738531367";
         $process = "ISBR:$isbn";
     }else {
         $isbn = "";
