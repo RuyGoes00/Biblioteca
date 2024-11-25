@@ -120,6 +120,7 @@ article .descricao::before{
 }
 .buttons {
     display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 .buttons button {
@@ -142,4 +143,17 @@ article .descricao::before{
 .buttons button i{
     font-size: large;
     margin-right: 10px;
+}
+.butao {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+.butao button {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    width: 50%;
 }

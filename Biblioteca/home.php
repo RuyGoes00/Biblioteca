@@ -84,6 +84,11 @@
       <h3>Destaques</h3>
       <div class="scroll">
         <?php
+        if (isset($_GET['error'])){
+          if ($_GET['error'] = "id-não-fornecido"){
+            echo "<script>alert('Não foi pssivel encontrar esse id!! Tente novamente!!')</script>";
+          }
+        }
           $json = json_decode(file_get_contents("destaque.json"), true);
         for ($i = 0; $i < count($json["destaques"]); $i++) {
           $codigo = $json["destaques"][$i];

@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nome do livro</title>
+  <title><?php
+  $id = $_GET['id'];
+  $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$id");
+  $dados = json_decode($page, true);
+  echo $dados['volumeInfo']['title'];
+  ?></title>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -17,14 +22,20 @@
 
 <body>
   <?php
+if (!isset($_GET['id']) || empty($_GET['id'])) {
+  //  echo "<script>alert('Não foi pssivel encontrar esse id!! Tente novamente!!')</script>";
+  header("Location: home.php?error=id-nao-fornecido");
+  exit;
+} else {
 
+}
   if ($_GET['id']) {
     $id = $_GET['id'];
     $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$id");
 
     if (isset($page)) {
-
       $dados = json_decode($page, true);
+
       if (isset($dados)) {
         if (isset($dados['volumeInfo']['title'])) {
           $nome = $dados['volumeInfo']['title'];
@@ -94,28 +105,24 @@
           <p class="nome-autor"><?= $autor ?></p>
           <p class="nome-editora"><?= $editora ?></p>
           <p class="isbn"><?= $isbn ?></p>
-          <div class="add-fav">
-            
-            <div class="buttons" style="flex-direction: wrap
-            ;">
-            <button onclick="redirectAddFav()" style="padding: 10px; cursor: pointer;"><i class="fa-solid fa-heart"></i>Adicionar a minha Estante</button>
-              <button name="vizualização" style="text-align: center; cursor: pointer;" onclick="visualizacao()"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
-            </div>
-            <script>
-              function redirectAddFav(){
-                document.location.href = "add_favorito.php?id=<?= $id ?>";
-                
-              }
-              function visualizacao(){
-                document.location.href = "bookView.php?id=<?=$id?>";
-              }
-              </script>
-              </div>
+          <script>
+            function redirectAddFav(){
+              document.location.href = "add_favorito.php?id=<?= $id ?>";
+              
+            }
+            function visualizacao(){
+              document.location.href = "bookView.php?id=<?=$id?>";
+            }
+            </script>
         </div>
       </div>
       <div class="paragraf">
         <p><?= $descricao ?></p>
       </div>
+      <div class="buttons" style="width: 100%; ">
+        <button onclick="redirectAddFav()" style="padding: 10px; cursor: pointer; width: 50%;"><i class="fa-solid fa-heart"></i>Adicionar a minha Estante</button>
+        <button name="vizualização" style=" padding:10px ;text-align: center; cursor: pointer; width: 50%;" onclick="visualizacao()"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
+        </div>
     </div>
   </section>
   <?php 

@@ -12,10 +12,10 @@
     <div class="footer-links">
       <h3>Links Úteis</h3>
       <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Categorias</a></li>
-        <li><a href="#">Mais Vendidos</a></li>
-        <li><a href="#">Autores</a></li>
+        <li><a href="home.php">Início</a></li>
+        <li><a href="catalogo.php?search=Harry-Potter">Catalogo</a></li>
+        <li><a href="minhaEstante.php">Minha Estante</a></li>
+        <li><a href="Conta.php">Minha conta</a></li>
       </ul>
     </div>
     <div class="footer-contact">

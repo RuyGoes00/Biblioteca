@@ -24,12 +24,7 @@
         <h1 style="text-align: center;">Minha Estante</h1>
         <div class="estante">
             <?php
-
             include "config.php";
-            if (!isset($_GET['id']) || empty($_GET['id'])) {
-                header("Location: www.google.com");
-                exit;
-            }
             $query = "SELECT count(*) FROM favoritos";
             $biblioteca = $conn->query($query);
             $quant_favs = mysqli_fetch_array($biblioteca);
@@ -43,7 +38,7 @@
                     if (isset($data[0])) {
                         $codigo = $data[0];
                         $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$codigo");
-                        if (isset($page)) {
+                        if (isset($page)) {     
                             $dados = json_decode($page, true);
                             if (isset($dados)) {
                                 if (isset($dados['id'])) {
