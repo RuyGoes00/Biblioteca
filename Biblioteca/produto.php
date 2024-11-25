@@ -70,28 +70,9 @@
   // botão de favorito
 
   ?>
-  <header>
-    <div class="logo">
-      <img src="style/assets/BookOn - 1.png" alt="" />
-    </div>
-    <div class="pesquisa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input
-        type="text"
-        name="search"
-        placeholder="Procure por um Livro ou Autor" />
-    </div>
-    <nav>
-      <a href="home.html">Home</a>
-      <a href="catalogo.html">Estante</a>
-      <a href="#">Sobre</a>
-      <a href="#">Categorias</a>
-      <a href="#">Minha Conta</a>
-    </nav>
-    <div class="shop-cart">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-  </header>
+  <?php 
+  include "header.php";
+  ?>
   <section class="produto">
     <div class="img-livro">
       <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" alt="" />
@@ -105,7 +86,7 @@
         <?= $descricao ?>
       </p>
     </article>
-    <div class="checkout">
+    <div class="checkout" style="width: max-content;">
       <div class="infos">
         <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" alt="" class="livro-mini" />
         <div class="infos-mini">
@@ -114,28 +95,32 @@
           <p class="nome-editora"><?= $editora ?></p>
           <p class="isbn"><?= $isbn ?></p>
           <div class="add-fav">
-
+            
+            <div class="buttons" style="flex-direction: wrap
+            ;">
             <button onclick="redirectAddFav()" style="padding: 10px; cursor: pointer;"><i class="fa-solid fa-heart"></i>Adicionar a minha Estante</button>
+              <button name="vizualização" style="text-align: center; cursor: pointer;" onclick="visualizacao()"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
+            </div>
             <script>
               function redirectAddFav(){
                 document.location.href = "add_favorito.php?id=<?= $id ?>";
                 
               }
               function visualizacao(){
-                document.location.href = "bookView.php?isbn=<?=$isbn?>";
+                document.location.href = "bookView.php?id=<?=$id?>";
               }
               </script>
               </div>
         </div>
       </div>
       <div class="paragraf">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sit, omnis laboriosam delectus fugiat saepe quibusdam minus modi nesciunt eos hic possimus officia nam, blanditiis corrupti expedita obcaecati accusantium culpa.</p>
-      </div>
-      <div class="buttons">
-        <button name="vizualização" style="text-align: center; cursor: pointer;" onclick="visualizacao()"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
+        <p><?= $descricao ?></p>
       </div>
     </div>
   </section>
+  <?php 
+  include "footer.php";
+  ?>
 </body>
 
 </html>

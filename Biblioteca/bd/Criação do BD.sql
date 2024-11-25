@@ -1,6 +1,6 @@
 Create table favoritos (
 id int primary key auto_increment not null,
-codigo varchar(20) unique
+codigo varchar(20)
 );
 drop table favoritos;
 select * from destaques;
