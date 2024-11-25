@@ -35,9 +35,10 @@
 }
 .scroll {
   width: 100%;
+  height: max-content;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
 }
 .categoria {
   display: flex;
@@ -175,7 +176,6 @@ main:hover {
   padding: 10px;
   color: white;
   width: 150px;
-  height: min-content;
   animation: pulse 1s forwards;
   cursor: pointer;
 }
