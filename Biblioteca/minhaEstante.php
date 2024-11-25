@@ -26,7 +26,10 @@
             <?php
 
             include "config.php";
-
+            if (!isset($_GET['id']) || empty($_GET['id'])) {
+                header("Location: www.google.com");
+                exit;
+            }
             $query = "SELECT count(*) FROM favoritos";
             $biblioteca = $conn->query($query);
             $quant_favs = mysqli_fetch_array($biblioteca);

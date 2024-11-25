@@ -34,10 +34,9 @@
   gap: 20px;
 }
 .scroll {
-  width: max-content;
-  flex-shrink: 0;
-  overflow-x: scroll;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .categoria {
@@ -169,7 +168,6 @@ main:hover {
 }
 
 .info-livro {
-  position: absolute;
   display: none;
   justify-content: flex-start;
   flex-direction: column;
@@ -177,6 +175,7 @@ main:hover {
   padding: 10px;
   color: white;
   width: 150px;
+  height: min-content;
   animation: pulse 1s forwards;
   cursor: pointer;
 }
@@ -219,8 +218,9 @@ main:hover {
   display: flex;
 }
 
-.livro:hover> :not(:hover) {
+.livro:hover > :not(:hover) {
   display: flex;
+  position: absolute;
   animation: reveal-info-livro 1s ease-in-out;
 
 }/*
