@@ -1,8 +1,174 @@
 {
-    "destaques": [
-       "-bF2CwAAQBAJ","5veyEAAAQBAJ","tsNbpFw3PdMC","_VIoEQAAQBAJ","NEm4DgAAQBAJ","qDYQCwAAQBAJ","d7s8EAAAQBAJ","R9QnDwAAQBAJ","Ye_6DwAAQBAJ","-DgQCwAAQBAJ","THsEEAAAQBAJ"
-    ],
-    "romance": [
-        "3wohEJsBaI0C","d7s8EAAAQBAJ","ChZXdaeMOgAC","nOgl4G7ayDcC","10qIEAAAQBAJ","qLptEAAAQBAJ","UGIC7N0Op2MC","vC84EAAAQBAJ","QiRuEAAAQBAJ","luSmDwAAQBAJ"
-    ]
+  "destaque": [
+    {
+      "id": "-bF2CwAAQBAJ",
+      "nome": "Harry Potter: A Coleção Completa (1-7)",
+      "autor": "J.K. Rowling",
+      "ISBN": "1781106584",
+      "dataLançamento": "2016-01-28",
+      "capa": "http://books.google.com/books/publisher/content?id=-bF2CwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71YlRxVh7ek1ORzIhFb64dSLSjm40ivDOipdnHSKodr8zMutlIIVHMkgi4PbwoaLtFa5ZBXZrbZziSJ5ImS0kXvLR9ABGpqZFFPTwa0GyUhj29Sb2beAgbtlQdp-NRUYLbipLXp&source=gbs_api"
+    },
+    {
+      "id": "5veyEAAAQBAJ",
+      "nome": "Aprendendo a Jogar Xadrez",
+      "autor": "Cláudio Veríssimo",
+      "ISBN": "6500325648",
+      "dataLançamento": "indefinida",
+      "capa": "http://books.google.com/books/publisher/content?id=5veyEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70RW_JsoWEGPIDupI7B0gLv84zqOp1DwnOkf3odN3BW6CEscZKTbI98qsTeF9JDgUdhQeZ5OHpkomSJ8Su4i90P4LVUBjlITDlFDpZgXklheA0uCyPeQc3z5-wUEkvkeHu3NEGy&source=gbs_api"
+    },
+    {
+      "id": "tsNbpFw3PdMC",
+      "nome": "Diário de um Banana 2",
+      "autor": "Jeff Kinney",
+      "ISBN": "8576831953",
+      "dataLançamento": "2009-06",
+      "capa": "http://books.google.com/books/content?id=tsNbpFw3PdMC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70fu76zRIhyc2j-jRfS7cSZA7S8nY4G91dLsLwxrm1WE9zHU4txuYcXfrC4Dh3P83-8BXrEFr89XjScbdZtpS_KQaw0j-Y6ouzKiFhNKmvKi8T1VzI9WCKNsOPek_1lXPio1ts2&source=gbs_api"
+    },
+    {
+      "id": "_VIoEQAAQBAJ",
+      "nome": "Percy Jackson e a Ira da Deusa Tríplice",
+      "autor": "Rick Riordan",
+      "ISBN": "9895812264",
+      "dataLançamento": "2024-10-01",
+      "capa": "http://books.google.com/books/publisher/content?id=_VIoEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE720Zm9rhE6ywFCehDngcT-lk4_G7vVmZ1Z-zLxS_UQefbuwAhOSZ3A3KAE8Wr3vYclpOZTJn3XN0IgKZkf9VTaqR2x3WyixmLbEvJ4ecRR7zpPk2gLPiLHW56VA5_kMQLELB8oR&source=gbs_api"
+    },
+    {
+      "id": "NEm4DgAAQBAJ",
+      "nome": "Animais Fantásticos e Onde Habitam",
+      "autor": "J.K. Rowling",
+      "ISBN": "1781109176",
+      "dataLançamento": "2017-05-20",
+      "capa": "http://books.google.com/books/publisher/content?id=NEm4DgAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71zW8imTd_hnLRabuAoEAxAbz3-6elV6cY9PuK-ZZGDDV5z1aoeXE0hFsUDIock_jzRKBZ44iD6IZ4uURM9mW8jWRkqfllAZLon0-kb5_471tR5hLgf6-PQ8NCsTV9PiWWh4CzM&source=gbs_api"
+    },
+    {
+      "id": "qDYQCwAAQBAJ",
+      "nome": "Harry Potter e o prisioneiro de Azkaban",
+      "autor": "J.K. Rowling",
+      "ISBN": "1781103704",
+      "dataLançamento": "2015-12-08",
+      "capa": "http://books.google.com/books/publisher/content?id=qDYQCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73bVBgzD8wIai7HYwNenN4PiPjW-VhpO5s0SpdoWEhLT6NrihJIkHgRkGgtjS-kcxJmXVEUza0Bq9BVth_wwiFOCR1LcuZIAkcQ8HbqTKsPEEBfx_jwWyuf7LV6zI38v-xigjOa&source=gbs_api"
+    },
+    {
+      "id": "d7s8EAAAQBAJ",
+      "nome": "Amor & azeitonas",
+      "autor": "Jenna Evans Welch",
+      "ISBN": "6555603089",
+      "dataLançamento": "2021-09-03",
+      "capa": "http://books.google.com/books/publisher/content?id=d7s8EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72SlAmcD_n2AsnhYlV4PPJHrxXT76_YYmtNQOnBBh7qicSUzuMyhizqem3djD8NDBk8z8Q6THZ5aWOO5JoBUzrRc090tboFYtiox2p8PXSZekh4gOfDSo39Choap--gS893HiwM&source=gbs_api"
+    },
+    {
+      "id": "R9QnDwAAQBAJ",
+      "nome": "Amor & gelato",
+      "autor": "Jenna Evans Welch",
+      "ISBN": "855100235X",
+      "dataLançamento": "2017-07-21",
+      "capa": "http://books.google.com/books/publisher/content?id=R9QnDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72tUqscyg8ct9qEISdnps05A1GX9GGqlnwatzmxDOSBy4QxKLfLjATjEMT0TSEd1iXx3bzTrKar2kXUPWEXGB8K8yd6hpGJIRLIWkFSh5gfw0BDsVVpQazYupG5p_9MunSgyiiu&source=gbs_api"
+    },
+    {
+      "id": "Ye_6DwAAQBAJ",
+      "nome": "Amor & sorte",
+      "autor": "Jenna Evans Welch",
+      "ISBN": "6555600098",
+      "dataLançamento": "2020-09-17",
+      "capa": "http://books.google.com/books/publisher/content?id=Ye_6DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70dU1Kt2p3T8CB8lmZJAkTXHLy5XjOb6Q3r2fDfWyhYNpssKoiI8k5DGKSye233RzQMMegl5IdH3t1wmhJiftYRPXYV0WbfAOg9NadTtqMPMD7v4OXtarKGT7Oxt6DKRHWhj3s4&source=gbs_api"
+    },
+    {
+      "id": "-DgQCwAAQBAJ",
+      "nome": "Harry Potter e as Relíquias da Morte",
+      "autor": "J.K. Rowling",
+      "ISBN": "1781104069",
+      "dataLançamento": "2015-12-08",
+      "capa": "http://books.google.com/books/publisher/content?id=-DgQCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72K48nhqlQ8m9Qt0dCX08YXR_Ic3RmmP2EaQ0dXLbW8-ldZwC7fDPlGMPdSfTna954TkpxNn1kyoGrHB8XBSyWDHkjuyL1q-khEAmORe3q2TNDWKQ5NlM_gIrlo4vuGvuKA3wK8&source=gbs_api"
+    },
+    {
+      "id": "THsEEAAAQBAJ",
+      "nome": "Naruto - vol. 1",
+      "autor": "Masashi Kishimoto",
+      "ISBN": "8542621492",
+      "dataLançamento": "2019-05-14",
+      "capa": "http://books.google.com/books/publisher/content?id=THsEEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE717xZ-8u35jLAR42D1AGpqTZa-JBgdJmeE1IT3GyGTXyRPkbDzYWCMfc75j7ogFLUMRlX_0hDE-PPODPsNjJdQLae7yFjDeJ7pmWgkCIFdPIdu5dkisr6rkppq9CkMLLQXMTDpN&source=gbs_api"
+    }
+  ],
+  "romance": [
+    {
+      "id": "3wohEJsBaI0C",
+      "nome": "Como eu era antes de você",
+      "autor": "Jojo Moyes",
+      "ISBN": "8580573262",
+      "dataLançamento": "2013-04-19",
+      "capa": "http://books.google.com/books/content?id=3wohEJsBaI0C&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70xMJMIpDmnp3Xcd4lo6eyoNZu8xRVIL8WmrAT173Oir3xFElfXYUXAmow-FmkeIBtubK1YEJS7Ml2L_ADqPNfv3sr2KjENNJxJH7wdNR-PBeAxdqGWWFFgtp8INFQVfQR0leHW&source=gbs_api"
+    },
+    {
+      "id": "d7s8EAAAQBAJ",
+      "nome": "Amor & azeitonas",
+      "autor": "Jenna Evans Welch",
+      "ISBN": "6555603089",
+      "dataLançamento": "2021-09-03",
+      "capa": "http://books.google.com/books/publisher/content?id=d7s8EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE713qOztMWf0iWYUABSxErJXlbzxwk5k9VYf1-sM9gbIIPCUeRAaxsK5CQRNoyzdi6pbzZ_kq4JJB2kq-8vem5ZIkI3WxhujlY8_HWvJGS5BPX_kJsn2nHhAVeBa5PIpLTP0Zcvq&source=gbs_api"
+    },
+    {
+      "id": "ChZXdaeMOgAC",
+      "nome": "Crónica de Paixões e Caprichos",
+      "autor": "Julia Quinn",
+      "ISBN": "9789892317779",
+      "dataLançamento": "2021-01-15",
+      "capa": "http://books.google.com/books/content?id=ChZXdaeMOgAC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE7238EMo2Em-bL6PB7L6nLCCkKObL4wwzfJJA_olHMISMQtinalWg6qtm9BnPGkERiu-SzOlXdnq35fuH-xLKKY-F7luTPmyDbrgJYfab9-X0noibBVvJtsD0dcvVkvpwQ6tJx8r&source=gbs_api"
+    },
+    {
+      "id": "nOgl4G7ayDcC",
+      "nome": "A última carta de amor",
+      "autor": "Jojo Moyes",
+      "ISBN": "8580570999",
+      "dataLançamento": "2012-11-13",
+      "capa": "http://books.google.com/books/content?id=nOgl4G7ayDcC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72lqtVk0DmSsiHGNkzKHiZfGRTJOiH-kHrMo79XuzrmzTzDtdK6t-iXF0vtmFyxPbmbz2-cry_JcDOol_aSffxUd08NDoy857YKi1YdNorMcNHzLBI-eTcUzJs528058TjE4VjG&source=gbs_api"
+    },
+    {
+      "id": "10qIEAAAQBAJ",
+      "nome": "É assim que começa (Vol. 2 É assim que acaba)",
+      "autor": "Colleen Hoover",
+      "ISBN": "6559812219",
+      "dataLançamento": "2022-10-18",
+      "capa": "http://books.google.com/books/publisher/content?id=10qIEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70RA00laYfPYdrJJ9mpBFI3Ybk-gAWGZ0-ztezD-8ydMwSRsEGBrN5Opy0Phcy0_xBOoGtrs1q955U7Z04CnN6QIT-5ALBa55Legmj43S428vlWyC-46TiWc6laQc57a0bBArUy&source=gbs_api"
+    },
+    {
+      "id": "qLptEAAAQBAJ",
+      "nome": "A hipótese do amor",
+      "autor": "Ali Hazelwood",
+      "ISBN": "6555653310",
+      "dataLançamento": "2022-06-26",
+      "capa": "http://books.google.com/books/publisher/content?id=qLptEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73yZYbquqUrhyEEZlP2cGgCcEVN4OYe09kqUO4G6xgNV0gxmobnbMQid5OPZiqwi6MyPwAXG9YbFnN-bT8qRQpYF0ABxs3HOOXQBuiQFEy1DmVzU9Je1BiA2LasereL7cEUO2SL&source=gbs_api"
+    },
+    {
+      "id": "UGIC7N0Op2MC",
+      "nome": "Orgulho e Preconceito",
+      "autor": "Jane Austen",
+      "ISBN": "8525404357",
+      "dataLançamento": "2010-01-21",
+      "capa": "http://books.google.com/books/content?id=UGIC7N0Op2MC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73FmlhVYzxvRQtWhW5ngVyDO1iKJr9i4ZJnUPFv7HtxXKiC2Nog_OSY5Bnq6CGp-UrFkY6atboS2Z7qsM11wWs-jwrYCHS_5odZxOxM7BQo-UdSH4VghAuYUrndVoWU9U7U_yV5&source=gbs_api"
+    },
+    {
+      "id": "vC84EAAAQBAJ",
+      "nome": "Os dois morrem no final",
+      "autor": "Adam Silvera",
+      "ISBN": "6555603038",
+      "dataLançamento": "2021-10-04",
+      "capa": "http://books.google.com/books/publisher/content?id=vC84EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73XJcVJwOqh4ZklfBje7fU6sLlK4KXQ_okcf6X4288lTY4rHLmuyWAOQrBDA0lc1xIq8RtwoqhvxNVa-SJ-20ixe5DRYp6j-B6iJboP-uDaMI3oiAXySFRZC4qBhZcfT91oIXhu&source=gbs_api"
+    },
+    {
+      "id": "QiRuEAAAQBAJ",
+      "nome": "Uma segunda chance",
+      "autor": "Colleen Hoover",
+      "ISBN": "6559811654",
+      "dataLançamento": "2022-05-31",
+      "capa": "http://books.google.com/books/publisher/content?id=QiRuEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73LEAK10g__j3gb-5tw-U2n27b5N3VOlgUMt-vBGgTkGET-YqZX1dWMPYBLzB5jOBnuoeeWsaxAh5eval9_Nzijw15XcTNVAyBuUoQz1LMZYmVkMoDljeVVhcjEAY_BJTVMAg51&source=gbs_api"
+    },
+    {
+      "id": "luSmDwAAQBAJ",
+      "nome": "Todas as suas (im)perfeições",
+      "autor": "Colleen Hoover",
+      "ISBN": "8501117919",
+      "dataLançamento": "2019-08-05",
+      "capa": "http://books.google.com/books/publisher/content?id=luSmDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70lyIwrxwEHSh3tfB3bnPn8faUS6jlQfO5fuTrue4GooG3-THFcjHXWRdHR-bKtouFQGvomeL5BihnKLwMVX9ukPxfr1pozCsOvV9Vz0dKh2JdHjjuvttMF6QNLN7Maq--qrtKZ&source=gbs_api"
+    }
+  ]
 }

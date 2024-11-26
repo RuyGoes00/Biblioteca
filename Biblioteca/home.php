@@ -89,58 +89,37 @@
             echo "<script>alert('Não foi pssivel encontrar esse id!! Tente novamente!!')</script>";
           }
         }
+        function getLivro($info){
+          return [
+            "id" => $info['id']  ?? "indefinida",
+            "nome" => $info['nome'] ?? "indefinida",
+            "autor" => $info['autor'] ?? "indefinida",
+            "isbn" => $info['isbn'] ?? "indefinida",
+            "datalancamento" => $info['dataLançamento'] ?? "indefinida",
+            "capa" => $info['capa'] ?? "indefinida"
+          ];
+        }
           $json = json_decode(file_get_contents("destaque.json"), true);
-        for ($i = 0; $i < count($json["destaques"]); $i++) {
-          $codigo = $json["destaques"][$i];
-          $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$codigo");
-          if (isset($page)) {
-
-            $dados = json_decode($page, true);
-            if (isset($dados)) {
-              if (isset($dados['id'])) {
-                $id = $dados['id'];
-              } else {
-                $id = "indefinida";
-              }
-              if (isset($dados['volumeInfo']['title'])) {
-                $nome = $dados['volumeInfo']['title'];
-              } else {
-                $nome = "indefinida";
-              }
-              if (isset($dados['volumeInfo']['publishedDate'])) {
-                $dataLançamento = $dados['volumeInfo']['publishedDate'];
-              } else {
-                $dataLançamento = "indefinida";
-              }
-
-              if (isset($dados['volumeInfo']['authors'][0])) {
-                $autor = $dados['volumeInfo']['authors'][0];
-              } else {
-                $autor = "indefinida";
-              }
-
-              if (isset($dados['volumeInfo']['industryIdentifiers'][0]['identifier'])) {
-                $isbn = $dados['volumeInfo']['industryIdentifiers'][0]['identifier'];
-              } else {
-                $isbn = "indefinida";
-              }
-              if (isset($dados['volumeInfo']['imageLinks'])) {
-                $capa = $dados['volumeInfo']['imageLinks']['thumbnail'];
-                $objeto = '<div class="livro">
+        for ($i = 0; $i < count($json["destaque"]); $i++) {
+          $info = $json["destaque"][$i];
+          $book = getLivro($info);
+          $id = $book['id'];
+          $nome = $book['nome'];
+          $autor = $book['autor'];
+          $isbn = $book['isbn'];
+          $dataLançamento = $book['datalancamento'];
+          $capa = $book['capa'];
+          $objeto = '<div class="livro">
                   <a href="produto.php?id=' . $id . '"><img
                   src="' . $capa . '"
-                  alt="Capa do livro"  style="width: 250px;"/></a>
-                  <div class="info-livro" style= "width: 250px">
+                  alt="Capa do livro"  style="width: 200px;"/></a>
+                  <div class="info-livro" style= "width: 200px">
                   <h3>' . $nome . '</h3>
                   <h4>' . $autor . '</h4>
                   <h5>' . $dataLançamento . '</h5>
                   </div>
                   </div>';
-                echo $objeto;
-              }
-            }
-          } else {
-          }
+                  echo $objeto;
         }
         ?>
       </div>
@@ -150,60 +129,29 @@
       <div class="scroll">
         <?php
 
-          for ($n = 0; $n < count($json["romance"]); $n++) {
+$json_romance = json_decode(file_get_contents("destaque.json"), true);
+          for ($n = 0; $n < count($json_romance["romance"]); $n++) {
 
-            $codigo_romance = $json["romance"][$n];
-            $page_romance = file_get_contents("https://www.googleapis.com/books/v1/volumes/$codigo_romance");
-            if (isset($page_romance)) {
-
-              $dados_romance = json_decode($page_romance, true);
-              if (isset($dados)) {
-                if (isset($dados_romance['id'])) {
-                  $id_romance = $dados_romance['id'];
-                } else {
-                  $id_romance = "indefinida";
-                }
-                if (isset($dados_romance['volumeInfo']['title'])) {
-                  $nome_romance = $dados_romance['volumeInfo']['title'];
-                } else {
-                  $nome_romance = "indefinida";
-                }
-                if (isset($dados_romance['volumeInfo']['publishedDate'])) {
-                  $dataLançamento_romance = $dados_romance['volumeInfo']['publishedDate'];
-                } else {
-                  $dataLançamento_romance = "indefinida";
-                }
-
-                if (isset($dados_romance['volumeInfo']['authors'][0])) {
-                  $autor_romance = $dados_romance['volumeInfo']['authors'][0];
-                } else {
-                  $autor_romance = "indefinida";
-                }
-
-                if (isset($dados_romance['volumeInfo']['industryIdentifiers'][0]['identifier'])) {
-                  $isbn_romance = $dados_romance['volumeInfo']['industryIdentifiers'][0]['identifier'];
-                } else {
-                  $isbn_romance = "indefinida";
-                }
-                if (isset($dados_romance['volumeInfo']['imageLinks'])) {
-                  $capa_romance = $dados_romance['volumeInfo']['imageLinks']['thumbnail'];
-                  $objeto_romance = '<div class="livro">
+          $info_romance = $json_romance["romance"][$n];
+          $book_romance = getLivro($info_romance);
+          $id_romance = $book_romance['id'];
+          $nome_romance = $book_romance['nome'];
+          $autor_romance = $book_romance['autor'];
+          $isbn_romance = $book_romance['isbn'];
+          $dataLançamento_romance = $book_romance['datalancamento'];
+          $capa_romance = $book_romance['capa'];
+          $objeto_romance = '<div class="livro">
                   <a href="produto.php?id=' . $id_romance . '"><img
                   src="' . $capa_romance . '"
-                  alt="Capa do livro"  style="width: 250px;"/></a>
-                  <div class="info-livro" style= "width: 250px">
+                  alt="Capa do livro"  style="width: 200px;"/></a>
+                  <div class="info-livro" style= "width: 200px">
                   <h3>' . $nome_romance . '</h3>
-                  <h4>' . $autor_romance . '</h4>
+                  <h4>' . $autor_romance. '</h4>
                   <h5>' . $dataLançamento_romance . '</h5>
                   </div>
                   </div>';
                   echo $objeto_romance;
-                }
-              }
-            } else {
-            }
-          }
-          var_dump($json["romance"]);
+        } 
         ?>
       </div>
     </div>

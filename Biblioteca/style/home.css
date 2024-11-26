@@ -176,6 +176,8 @@ main:hover {
   padding: 10px;
   color: white;
   width: 150px;
+  position: relative;
+  height: min-content;
   animation: pulse 1s forwards;
   cursor: pointer;
 }
@@ -220,7 +222,6 @@ main:hover {
 
 .livro:hover > :not(:hover) {
   display: flex;
-  position: absolute;
   animation: reveal-info-livro 1s ease-in-out;
 
 }/*
