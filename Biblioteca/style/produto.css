@@ -59,7 +59,7 @@ article .descricao::before{
 .checkout {
     display: flex;
     flex-direction: column;
-    min-width: 600px;
+    min-width: 400px;
     background-color: #bde1ec;
     padding: 20px;
 }

@@ -87,9 +87,9 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
   ?>
   <section class="produto">
     <div class="img-livro">
-      <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=10&edge=curl&source=gbs_api" alt="" />
+      <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" alt="" />
     </div>
-    <article>
+    <article style="width: 500px;">
       <h1><?= $nome ?></h1>
       <p class="nome-autor"><?= $autor ?></p>
       <p class="nome-editora"><?= $editora ?></p>
@@ -98,31 +98,41 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
         <?= $descricao ?>
       </p>
     </article>
-    <div class="checkout" style="width: max-content;">
-      <div class="infos">
-        <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=10&edge=curl&source=gbs_api" alt="" class="livro-mini" />
+    <div class="checkout" style="width: 400px;">
+      <article class="infos">
+        <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" alt="" class="livro-mini" />
         <div class="infos-mini">
           <h1><?= $nome ?></h1>
           <p class="nome-autor"><?= $autor ?></p>
           <p class="nome-editora"><?= $editora ?></p>
           <p class="isbn"><?= $isbn ?></p>
+          <?php 
+          $id_visualização = "";
+          $isRead = $dados['accessInfo']['epub']['acsTokenLink'];
+          if (isset($isRead)){
+            $id_visualização = $id;
+          } else {
+            echo "<script>Alert('Este livro não está disponivel para leitura!!')</script>";
+          }
+          
+          ?>
           <script>
             function redirectAddFav(){
               document.location.href = "add_favorito.php?id=<?= $id ?>";
               
             }
             function visualizacao(){
-              document.location.href = "bookView.php?id=<?=$id?>";
+              document.location.href = "bookView.php?id=<?=$id_visualização?>";
             }
             </script>
         </div>
-      </div>
-      <div class="paragraf">
-        <p><?= $descricao ?></p>
-      </div>
-      <div class="buttons" style="width: 100%; ">
-        <button onclick="redirectAddFav()" style="padding: 10px; cursor: pointer; width: 50%;"><i class="fa-solid fa-heart"></i>Adicionar a minha Estante</button>
-        <button name="vizualização" style=" padding:10px ;text-align: center; cursor: pointer; width: 50%;" onclick="visualizacao()"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
+      </article>
+      <!--<div class="paragraf">
+        <p>/ // $descricao </p>
+      </div>-->
+      <div class="buttons" style="width: 100%; margin-top: 20px; ">
+        <button onclick="redirectAddFav()" style="padding: 10px; cursor: pointer; width: 100%;"><i class="fa-solid fa-heart"></i>Adicionar a minha Estante</button>
+        <button name="vizualização" style=" padding:10px ;text-align: center; cursor: pointer; width: 100%;" onclick="visualizacao()"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
         </div>
     </div>
   </section>
