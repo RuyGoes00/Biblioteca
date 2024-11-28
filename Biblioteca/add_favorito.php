@@ -12,6 +12,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/add_favorito.css">
+    <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>

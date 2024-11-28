@@ -13,7 +13,6 @@
     <div style="display: flex; flex-wrap: wrap; margin: 30px;">
 
         <?php
-        /*
         $books = [];
         function getBook($pesquisa){
     $livro_url = strtolower(urlencode($pesquisa));
@@ -63,64 +62,7 @@
         }
     }
 }
-}*/
-        if (isset($_GET['error'])){
-          if ($_GET['error'] = "id-não-fornecido"){
-            echo "<script>alert('Não foi pssivel encontrar esse id!! Tente novamente!!')</script>";
-          }
-        }
-          $json = json_decode(file_get_contents("destaque.json"), true);
-        for ($i = 0; $i < count($json["romance"]); $i++) {
-          $codigo = $json["romance"][$i];
-          $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$codigo");
-          if (isset($page)) {
-
-            $dados = json_decode($page, true);
-            if (isset($dados)) {
-              if (isset($dados['id'])) {
-                $id = $dados['id'];
-              } else {
-                $id = "indefinida";
-              }
-              if (isset($dados['volumeInfo']['title'])) {
-                $nome = $dados['volumeInfo']['title'];
-              } else {
-                $nome = "indefinida";
-              }
-              if (isset($dados['volumeInfo']['publishedDate'])) {
-                $dataLançamento = $dados['volumeInfo']['publishedDate'];
-              } else {
-                $dataLançamento = "indefinida";
-              }
-
-              if (isset($dados['volumeInfo']['authors'][0])) {
-                $autor = $dados['volumeInfo']['authors'][0];
-              } else {
-                $autor = "indefinida";
-              }
-
-              if (isset($dados['volumeInfo']['industryIdentifiers'][0]['identifier'])) {
-                $isbn = $dados['volumeInfo']['industryIdentifiers'][0]['identifier'];
-              } else {
-                $isbn = "indefinida";
-              }
-              if (isset($dados['volumeInfo']['imageLinks'])) {
-                $capa = $dados['volumeInfo']['imageLinks']['thumbnail'];
-                $objeto = "{
-                    \"id\": \"$id\",
-                    \"nome\": \"$nome\",
-                    \"autor\": \"$autor\",
-                    \"ISBN\": \"$isbn\",
-                    \"dataLançamento\": \"$dataLançamento\",
-                    \"capa\": \"$capa\"
-                }<br>";
-                
-                echo $objeto;   
-              }
-            }
-          } else {
-          }
-        }
+}
 ?>
 </div>
 </body>

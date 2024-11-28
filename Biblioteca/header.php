@@ -7,6 +7,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
 </head>
 <header>
     <div class="logo">

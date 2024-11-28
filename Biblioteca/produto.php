@@ -18,6 +18,7 @@
     referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style/produto.css" />
   <link rel="stylesheet" href="style/header.css" />
+  <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -86,7 +87,7 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
   ?>
   <section class="produto">
     <div class="img-livro">
-      <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" alt="" />
+      <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=10&edge=curl&source=gbs_api" alt="" />
     </div>
     <article>
       <h1><?= $nome ?></h1>
@@ -99,7 +100,7 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
     </article>
     <div class="checkout" style="width: max-content;">
       <div class="infos">
-        <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" alt="" class="livro-mini" />
+        <img src="http://books.google.com/books/content?id=<?= $id ?>&printsec=frontcover&img=1&zoom=10&edge=curl&source=gbs_api" alt="" class="livro-mini" />
         <div class="infos-mini">
           <h1><?= $nome ?></h1>
           <p class="nome-autor"><?= $autor ?></p>

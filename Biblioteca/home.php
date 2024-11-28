@@ -12,11 +12,12 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style/home.css" />
+  <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
 
 </head>
 
 <body>
-  <?php include "header.php" ?>
+  <?php include "header.php"; ?>
   <section class="categorias">
     <div class="categoria" id="categoria-1" onclick="Romance()">
       <img src="style/assets/Livros de romance icon.png" alt="" />
@@ -73,7 +74,7 @@
           explicabo delectus, laboriosam architecto libero minima culpa
           expedita placeat eveniet ut?
         </p>
-        <a href="#">Saiba Mais</a>
+        <a href="catalogo.php?search=fantasia" >Saiba Mais</a>
       </div>
     </div>
   </main>
@@ -101,7 +102,7 @@
         }
           $json = json_decode(file_get_contents("destaque.json"), true);
         for ($i = 0; $i < count($json["destaque"]); $i++) {
-          $info = $json["destaque"][$i];
+            $info = $json["destaque"][$i];
           $book = getLivro($info);
           $id = $book['id'];
           $nome = $book['nome'];
@@ -113,11 +114,6 @@
                   <a href="produto.php?id=' . $id . '"><img
                   src="' . $capa . '"
                   alt="Capa do livro"  style="width: 200px;"/></a>
-                  <div class="info-livro" style= "width: 200px">
-                  <h3>' . $nome . '</h3>
-                  <h4>' . $autor . '</h4>
-                  <h5>' . $dataLançamento . '</h5>
-                  </div>
                   </div>';
                   echo $objeto;
         }
@@ -144,11 +140,6 @@ $json_romance = json_decode(file_get_contents("destaque.json"), true);
                   <a href="produto.php?id=' . $id_romance . '"><img
                   src="' . $capa_romance . '"
                   alt="Capa do livro"  style="width: 200px;"/></a>
-                  <div class="info-livro" style= "width: 200px">
-                  <h3>' . $nome_romance . '</h3>
-                  <h4>' . $autor_romance. '</h4>
-                  <h5>' . $dataLançamento_romance . '</h5>
-                  </div>
                   </div>';
                   echo $objeto_romance;
         } 

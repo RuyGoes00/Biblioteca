@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Poppins;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
