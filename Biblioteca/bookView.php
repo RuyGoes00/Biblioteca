@@ -20,9 +20,7 @@
     function initialize() {
 
       var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
-      viewer.load('<?php if (isset($_GET['id'])) {
-                      echo $_GET['id'];
-                    } ?>;')
+      viewer.load('<?php echo $_GET['id'] ?>')
     }
     google.books.setOnLoadCallback(initialize);
   </script>

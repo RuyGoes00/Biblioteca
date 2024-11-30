@@ -69,3 +69,152 @@ header .shop-cart {
   cursor: pointer;
   color: var(--balck);
 }
+:root {
+  --primary: #023e8a;
+  --secondary: #48cae4;
+  --white: #fafafa;
+  --balck: #191716;
+  --border: 20px;
+  --padding-lados: 60px;
+  --shadow: 0px 0px 10px #1917164f;
+  --margin: 20px 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border-radius: var(--border);
+  box-shadow: var(--shadow);
+  padding: 20px var(--padding-lados);
+  height: 15vh;
+  margin: var(--margin);
+  gap: 10px;
+  flex-wrap: wrap; /* Permite que os itens ajustem para novas linhas */
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 25px;
+}
+
+header .pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 10px;
+  border: 2px solid var(--balck);
+  width: 300px;
+  border-radius: var(--border);
+}
+
+header .pesquisa i {
+  color: var(--balck);
+  margin-right: 10px;
+}
+
+header .pesquisa input:focus {
+  outline: none;
+}
+
+header .pesquisa input {
+  border: none;
+  background: none;
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  gap: 10px;
+}
+
+header nav a {
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 600;
+  color: var(--balck);
+}
+
+header .shop-cart {
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--balck);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  :root {
+    --padding-lados: 30px;
+    --margin: 10px 20px;
+  }
+
+  header {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  header .pesquisa {
+    width: 100%; /* Alinha a barra de pesquisa com a largura do container */
+    margin-top: 10px;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  header nav a {
+    font-size: small;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --padding-lados: 20px;
+  }
+
+  header {
+    flex-direction: column; /* Empilha os elementos */
+    text-align: center;
+  }
+
+  header .pesquisa {
+    margin: 10px 0;
+    width: 90%;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  header .pesquisa {
+    width: 100%;
+  }
+
+  header nav a {
+    font-size: small;
+  }
+
+  header .logo img {
+    height: 20px;
+  }
+}

@@ -10,8 +10,13 @@
     <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
 </head>
 <header>
+    <script>
+        function home(){
+            document.location.href = "home.php";   
+        }
+    </script>
     <div class="logo">
-        <img src="style/assets/BookOn - 2.png" alt="Logo do BookOn" />
+        <img src="style/assets/BookOn - 2.png" alt="Logo do BookOn" onclick="home()"/>
     </div>
     <div class="pesquisa">
         <form action="catalogo.php" method="get" style="display: flex; width: 300px;">

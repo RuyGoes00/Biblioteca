@@ -15,7 +15,140 @@
   <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
 
 </head>
+<style>
+  /* Responsividade para telas médias */
+@media (max-width: 1024px) {
+  :root {
+    --padding-lados: 30px;
+    --margin: 20px 40px;
+  }
 
+  .categorias {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  main {
+    height: 600px;
+    margin: var(--margin);
+  }
+
+  .mais-vendidos {
+    margin: var(--margin);
+    padding: 10px;
+  }
+
+  .row-autores {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .autor a img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  :root {
+    --padding-lados: 20px;
+    --margin: 15px 30px;
+  }
+
+
+  .scroll {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .destaques {
+    text-align: center;
+  }
+
+  .livro img {
+    width: 300px;
+  }
+
+  .info-livro {
+    width: 100px;
+    padding: 5px;
+  }
+
+  .autores {
+    height: auto;
+    padding: 15px;
+  }
+
+  .autor a img {
+    height: 130px;
+    width: 130px;
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  :root {
+    --padding-lados: 10px;
+    --margin: 10px 20px;
+  }
+
+  .categorias {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .categoria img {
+    height: 70px;
+  }
+
+  main {
+    height: 400px;
+    padding: 10px;
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  .mais-vendidos {
+    padding: 10px;
+  }
+
+  .row-autores {
+    gap: 15px;
+  }
+
+  .autor a img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .livro img {
+    width: 250px;
+  }
+
+  .info-livro {
+    width: 80px;
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .destaques h3 {
+    font-size: 18px;
+  }
+
+  .destaques .scroll {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+</style>
 <body>
   <?php include "header.php"; ?>
   <section class="categorias">

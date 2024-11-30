@@ -60,8 +60,9 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Livraria Online. Todos os direitos reservados.</p>
-    </footer>
+    
+    <?php 
+    include "footer.php";
+    ?>
 </body>
 </html>

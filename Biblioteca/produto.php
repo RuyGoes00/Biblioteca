@@ -20,7 +20,142 @@
   <link rel="stylesheet" href="style/header.css" />
   <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
 </head>
+<style>
+  /* Responsividade para telas médias */
+@media (max-width: 1024px) {
+  :root {
+    --padding-lados: 30px;
+    --margin: 15px 30px;
+  }
 
+  .produto {
+    flex-direction: column;
+    align-items: center;
+    margin: var(--margin);
+  }
+
+  .img-livro img {
+    height: 300px;
+  }
+
+  article h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  article p {
+    text-align: justify;
+    font-size: small;
+  }
+
+  .checkout {
+    min-width: 100%;
+    margin-top: 20px;
+  }
+
+  .infos {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .infos img {
+    height: 150px;
+  }
+
+  .infos-mini {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  :root {
+    --padding-lados: 20px;
+    --margin: 10px 20px;
+  }
+
+  .produto {
+    gap: 10px;
+  }
+
+  .img-livro img {
+    height: 200px;
+  }
+
+  article h1 {
+    font-size: 20px;
+  }
+
+  article p {
+    font-size: small;
+  }
+
+  .checkout {
+    padding: 15px;
+  }
+
+  .buttons {
+    gap: 5px;
+  }
+
+  .buttons button {
+    height: 35px;
+    font-size: smaller;
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  :root {
+    --padding-lados: 10px;
+    --margin: 5px 10px;
+  }
+
+  .produto {
+    margin: var(--margin);
+  }
+
+  .img-livro img {
+    height: 150px;
+  }
+
+  article h1 {
+    font-size: 18px;
+  }
+
+  article p {
+    font-size: x-small;
+  }
+
+  .checkout {
+    padding: 10px;
+  }
+
+  .infos img {
+    height: 100px;
+  }
+
+  .infos-mini p {
+    font-size: x-small;
+  }
+
+  .buttons button {
+    height: 30px;
+    font-size: x-small;
+  }
+
+  .butao button {
+    width: 100%;
+  }
+}
+
+</style>
 <body>
   <?php
 if (!isset($_GET['id']) || empty($_GET['id'])) {
