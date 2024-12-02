@@ -9,7 +9,7 @@
   $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$id");
   $dados = json_decode($page, true);
   echo $dados['volumeInfo']['title'];
-  ?></title>
+  ?></title>  
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -159,15 +159,15 @@
 <body>
   <?php
 if (!isset($_GET['id']) || empty($_GET['id'])) {
-  //  echo "<script>alert('Não foi pssivel encontrar esse id!! Tente novamente!!')</script>";
+  echo "<script>alert('Não foi pssivel encontrar esse id!! Tente novamente!!')</script>";
   header("Location: home.php?error=id-nao-fornecido");
   exit;
 } else {
 
 }
-  if ($_GET['id']) {
+if ($_GET['id']) {
     $id = $_GET['id'];
-    $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$id");
+    $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$id?key=AIzaSyDipEexZymPc2FvmqFCT9gbUcbHBp0TwbE");
 
     if (isset($page)) {
       $dados = json_decode($page, true);

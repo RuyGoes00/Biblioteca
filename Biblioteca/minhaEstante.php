@@ -38,7 +38,7 @@
                     $data = mysqli_fetch_array($mysqli);
                     if (isset($data[0])) {
                         $codigo = $data[0];
-                        $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$codigo");
+                        $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$codigo?key=AIzaSyDipEexZymPc2FvmqFCT9gbUcbHBp0TwbE");
                         if (isset($page)) {     
                             $dados = json_decode($page, true);
                             if (isset($dados)) {

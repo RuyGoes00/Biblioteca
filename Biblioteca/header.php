@@ -16,7 +16,7 @@
         }
     </script>
     <div class="logo">
-        <img src="style/assets/BookOn - 2.png" alt="Logo do BookOn" onclick="home()"/>
+        <img src="style/assets/BookOn - 2.png" alt="Logo do BookOn" onclick="home()" style="cursor: pointer;"/>
     </div>
     <div class="pesquisa">
         <form action="catalogo.php" method="get" style="display: flex; width: 300px;">

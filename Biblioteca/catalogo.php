@@ -41,7 +41,7 @@
             if (!empty($_GET['search']) && isset($_GET['search'])) {
                 $search = $_GET['search'];
                 $nomeForUrl = strtolower(urlencode($search));
-                $page = file_get_contents("https://www.googleapis.com/books/v1/volumes?q=$nomeForUrl");
+                $page = file_get_contents("https://www.googleapis.com/books/v1/volumes?q=$nomeForUrl&key=AIzaSyDipEexZymPc2FvmqFCT9gbUcbHBp0TwbE");
                 if (isset($page)) {
 
                     $dados = json_decode($page, true);
