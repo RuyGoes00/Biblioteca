@@ -1,6 +1,6 @@
 <head>
-    <link rel="stylesheet" href="style/footer.css">
-    <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
 </head>
 <footer>
   <div class="footer-container">

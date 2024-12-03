@@ -16,7 +16,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
                     if (isset($data[0])) {
                         $codigo = $data[0];
                         $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$codigo?key=AIzaSyDipEexZymPc2FvmqFCT9gbUcbHBp0TwbE");
-                        if (isset($page)) {     
+                        if (isset($page)) {
                             $dados = json_decode($page, true);
                             if (isset($dados)) {
                                 if (isset($dados['id'])) {
@@ -92,7 +92,7 @@
             ?>
         </div>
     </section>
-    <?php 
+    <?php
     include "footer.php";
     ?>
 </body>

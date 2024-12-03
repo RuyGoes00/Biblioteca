@@ -5,11 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?php
-  $id = $_GET['id'];
-  $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$id");
-  $dados = json_decode($page, true);
-  echo $dados['volumeInfo']['title'];
-  ?></title>  
+          $id = $_GET['id'];
+          $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$id");
+          $dados = json_decode($page, true);
+          echo $dados['volumeInfo']['title'];
+          ?></title>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -22,150 +22,149 @@
 </head>
 <style>
   /* Responsividade para telas médias */
-@media (max-width: 1024px) {
-  :root {
-    --padding-lados: 30px;
-    --margin: 15px 30px;
+  @media (max-width: 1024px) {
+    :root {
+      --padding-lados: 30px;
+      --margin: 15px 30px;
+    }
+
+    .produto {
+      flex-direction: column;
+      align-items: center;
+      margin: var(--margin);
+    }
+
+    .img-livro img {
+      height: 300px;
+    }
+
+    article h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    article p {
+      text-align: justify;
+      font-size: small;
+    }
+
+    .checkout {
+      min-width: 100%;
+      margin-top: 20px;
+    }
+
+    .infos {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .infos img {
+      height: 150px;
+    }
+
+    .infos-mini {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    .buttons button {
+      width: 100%;
+    }
   }
 
-  .produto {
-    flex-direction: column;
-    align-items: center;
-    margin: var(--margin);
+  /* Responsividade para telas pequenas */
+  @media (max-width: 768px) {
+    :root {
+      --padding-lados: 20px;
+      --margin: 10px 20px;
+    }
+
+    .produto {
+      gap: 10px;
+    }
+
+    .img-livro img {
+      height: 200px;
+    }
+
+    article h1 {
+      font-size: 20px;
+    }
+
+    article p {
+      font-size: small;
+    }
+
+    .checkout {
+      padding: 15px;
+    }
+
+    .buttons {
+      gap: 5px;
+    }
+
+    .buttons button {
+      height: 35px;
+      font-size: smaller;
+    }
   }
 
-  .img-livro img {
-    height: 300px;
-  }
+  /* Responsividade para telas muito pequenas */
+  @media (max-width: 480px) {
+    :root {
+      --padding-lados: 10px;
+      --margin: 5px 10px;
+    }
 
-  article h1 {
-    font-size: 24px;
-    text-align: center;
-  }
+    .produto {
+      margin: var(--margin);
+    }
 
-  article p {
-    text-align: justify;
-    font-size: small;
-  }
+    .img-livro img {
+      height: 150px;
+    }
 
-  .checkout {
-    min-width: 100%;
-    margin-top: 20px;
-  }
+    article h1 {
+      font-size: 18px;
+    }
 
-  .infos {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    article p {
+      font-size: x-small;
+    }
 
-  .infos img {
-    height: 150px;
-  }
+    .checkout {
+      padding: 10px;
+    }
 
-  .infos-mini {
-    margin-left: 0;
-    margin-top: 10px;
-  }
+    .infos img {
+      height: 100px;
+    }
 
-  .buttons button {
-    width: 100%;
-  }
-}
+    .infos-mini p {
+      font-size: x-small;
+    }
 
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-  :root {
-    --padding-lados: 20px;
-    --margin: 10px 20px;
-  }
+    .buttons button {
+      height: 30px;
+      font-size: x-small;
+    }
 
-  .produto {
-    gap: 10px;
+    .butao button {
+      width: 100%;
+    }
   }
-
-  .img-livro img {
-    height: 200px;
-  }
-
-  article h1 {
-    font-size: 20px;
-  }
-
-  article p {
-    font-size: small;
-  }
-
-  .checkout {
-    padding: 15px;
-  }
-
-  .buttons {
-    gap: 5px;
-  }
-
-  .buttons button {
-    height: 35px;
-    font-size: smaller;
-  }
-}
-
-/* Responsividade para telas muito pequenas */
-@media (max-width: 480px) {
-  :root {
-    --padding-lados: 10px;
-    --margin: 5px 10px;
-  }
-
-  .produto {
-    margin: var(--margin);
-  }
-
-  .img-livro img {
-    height: 150px;
-  }
-
-  article h1 {
-    font-size: 18px;
-  }
-
-  article p {
-    font-size: x-small;
-  }
-
-  .checkout {
-    padding: 10px;
-  }
-
-  .infos img {
-    height: 100px;
-  }
-
-  .infos-mini p {
-    font-size: x-small;
-  }
-
-  .buttons button {
-    height: 30px;
-    font-size: x-small;
-  }
-
-  .butao button {
-    width: 100%;
-  }
-}
-
 </style>
+
 <body>
   <?php
-if (!isset($_GET['id']) || empty($_GET['id'])) {
-  echo "<script>alert('Não foi pssivel encontrar esse id!! Tente novamente!!')</script>";
-  header("Location: home.php?error=id-nao-fornecido");
-  exit;
-} else {
-
-}
-if ($_GET['id']) {
+  if (!isset($_GET['id']) || empty($_GET['id'])) {
+    echo "<script>alert('Não foi pssivel encontrar esse id!! Tente novamente!!')</script>";
+    header("Location: home.php?error=id-nao-fornecido");
+    exit;
+  } else {
+  }
+  if ($_GET['id']) {
     $id = $_GET['id'];
     $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$id?key=AIzaSyDipEexZymPc2FvmqFCT9gbUcbHBp0TwbE");
 
@@ -214,10 +213,9 @@ if ($_GET['id']) {
       }
     }
   }
-  // botão de favorito
 
   ?>
-  <?php 
+  <?php
   include "header.php";
   ?>
   <section class="produto">
@@ -241,25 +239,25 @@ if ($_GET['id']) {
           <p class="nome-autor"><?= $autor ?></p>
           <p class="nome-editora"><?= $editora ?></p>
           <p class="isbn"><?= $isbn ?></p>
-          <?php 
+          <?php
           $id_visualização = "";
-          $isRead = $dados['accessInfo']['epub']['acsTokenLink'];
-          if (isset($isRead)){
+          if (isset($dados['accessInfo']['epub']['acsTokenLink'])) {
             $id_visualização = $id;
           } else {
             echo "<script>Alert('Este livro não está disponivel para leitura!!')</script>";
           }
-          
+
           ?>
           <script>
-            function redirectAddFav(){
+            function redirectAddFav() {
               document.location.href = "add_favorito.php?id=<?= $id ?>";
-              
+
             }
-            function visualizacao(){
-              document.location.href = "bookView.php?id=<?=$id_visualização?>";
+
+            function visualizacao() {
+              document.location.href = "bookView.php?id=<?= $id_visualização ?>";
             }
-            </script>
+          </script>
         </div>
       </article>
       <!--<div class="paragraf">
@@ -268,10 +266,10 @@ if ($_GET['id']) {
       <div class="buttons" style="width: 100%; margin-top: 20px; ">
         <button onclick="redirectAddFav()" style="padding: 10px; cursor: pointer; width: 100%;"><i class="fa-solid fa-heart"></i>Adicionar a minha Estante</button>
         <button name="vizualização" style=" padding:10px ;text-align: center; cursor: pointer; width: 100%;" onclick="visualizacao()"><i class="fa-solid fa-book-open-reader"></i> Pré-visualização</button>
-        </div>
+      </div>
     </div>
   </section>
-  <?php 
+  <?php
   include "footer.php";
   ?>
 </body>

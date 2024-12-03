@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,8 +94,9 @@
         }
     </style>
 </head>
+
 <body>
-    <?php 
+    <?php
     include "header.php";
     ?>
     <main>
@@ -113,10 +115,11 @@
         </article>
         <figure>
             <center><img src="style/assets/Dono.jpeg">
-            <p>Criador da Biblioteca BookOn</p>
-        <p>Ruy Barbosa</p></center>
+                <p>Criador da Biblioteca BookOn</p>
+                <p>Ruy Barbosa</p>
+            </center>
         </figure>
     </main>
-        <?php 
-        include "footer.php";
-        ?>
+    <?php
+    include "footer.php";
+    ?>

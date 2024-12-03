@@ -16,13 +16,13 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <?php include "header.php"; ?>
     <section class="catalogo-card">
-        <h1>Catálogo</h1>
+        <h1><?= "Resultados encontrados para " . '"' . $_GET['search'] . '"' ?></h1>
         <div class="estante">
             <!--<div class="livro">
                 <a href=""><img
@@ -78,7 +78,7 @@
                             if (isset($dados['items'][$i]['volumeInfo']['imageLinks'])) {
                                 $capa = $dados['items'][$i]['volumeInfo']['imageLinks']['thumbnail'];
                                 $objeto = '<div class="livro">
-                <a href="produto.php?id='.$id.'"><img
+                <a href="produto.php?id=' . $id . '"><img
                         src="' . $capa . '"
                         alt="Capa do livro"  style="width: 250px;"/></a>
                 <div class="info-livro" style= "width: 250px">
@@ -87,8 +87,8 @@
                     <h5>' . $dataLançamento . '</h5>
                 </div>
             </div>';
-                                echo $objeto;}
-                            
+                                echo $objeto;
+                            }
                         }
                     } else {
                     }
@@ -97,11 +97,10 @@
             } else {
                 $erro = "Não foi encontrado";
             }
-
             ?>
         </div>
     </section>
-    <?php 
+    <?php
     include "footer.php";
     ?>
 </body>

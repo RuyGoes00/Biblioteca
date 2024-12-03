@@ -17,138 +17,140 @@
 </head>
 <style>
   /* Responsividade para telas médias */
-@media (max-width: 1024px) {
-  :root {
-    --padding-lados: 30px;
-    --margin: 20px 40px;
+  @media (max-width: 1024px) {
+    :root {
+      --padding-lados: 30px;
+      --margin: 20px 40px;
+    }
+
+    .categorias {
+      flex-wrap: wrap;
+      height: auto;
+      gap: 10px;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    main {
+      height: 600px;
+      margin: var(--margin);
+    }
+
+    .mais-vendidos {
+      margin: var(--margin);
+      padding: 10px;
+    }
+
+    .row-autores {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .autor a img {
+      height: 150px;
+      width: 150px;
+    }
   }
 
-  .categorias {
-    flex-wrap: wrap;
-    height: auto;
-    gap: 10px;
-    justify-content: center;
-    padding: 10px;
+  /* Responsividade para telas pequenas */
+  @media (max-width: 768px) {
+    :root {
+      --padding-lados: 20px;
+      --margin: 15px 30px;
+    }
+
+
+    .scroll {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .destaques {
+      text-align: center;
+    }
+
+    .livro img {
+      width: 300px;
+    }
+
+    .info-livro {
+      width: 100px;
+      padding: 5px;
+    }
+
+    .autores {
+      height: auto;
+      padding: 15px;
+    }
+
+    .autor a img {
+      height: 130px;
+      width: 130px;
+    }
   }
 
-  main {
-    height: 600px;
-    margin: var(--margin);
+  /* Responsividade para telas muito pequenas */
+  @media (max-width: 480px) {
+    :root {
+      --padding-lados: 10px;
+      --margin: 10px 20px;
+    }
+
+    .categorias {
+      gap: 5px;
+      padding: 5px;
+    }
+
+    .categoria img {
+      height: 70px;
+    }
+
+    main {
+      height: 400px;
+      padding: 10px;
+    }
+
+    .content {
+      width: 90%;
+    }
+
+    .mais-vendidos {
+      padding: 10px;
+    }
+
+    .row-autores {
+      gap: 15px;
+    }
+
+    .autor a img {
+      height: 100px;
+      width: 100px;
+    }
+
+    .livro img {
+      width: 250px;
+    }
+
+    .info-livro {
+      width: 80px;
+      padding: 5px;
+      font-size: 12px;
+    }
+
+    .destaques h3 {
+      font-size: 18px;
+    }
+
+    .destaques .scroll {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
   }
-
-  .mais-vendidos {
-    margin: var(--margin);
-    padding: 10px;
-  }
-
-  .row-autores {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .autor a img {
-    height: 150px;
-    width: 150px;
-  }
-}
-
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-  :root {
-    --padding-lados: 20px;
-    --margin: 15px 30px;
-  }
-
-
-  .scroll {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .destaques {
-    text-align: center;
-  }
-
-  .livro img {
-    width: 300px;
-  }
-
-  .info-livro {
-    width: 100px;
-    padding: 5px;
-  }
-
-  .autores {
-    height: auto;
-    padding: 15px;
-  }
-
-  .autor a img {
-    height: 130px;
-    width: 130px;
-  }
-}
-
-/* Responsividade para telas muito pequenas */
-@media (max-width: 480px) {
-  :root {
-    --padding-lados: 10px;
-    --margin: 10px 20px;
-  }
-
-  .categorias {
-    gap: 5px;
-    padding: 5px;
-  }
-
-  .categoria img {
-    height: 70px;
-  }
-
-  main {
-    height: 400px;
-    padding: 10px;
-  }
-
-  .content {
-    width: 90%;
-  }
-
-  .mais-vendidos {
-    padding: 10px;
-  }
-
-  .row-autores {
-    gap: 15px;
-  }
-
-  .autor a img {
-    height: 100px;
-    width: 100px;
-  }
-
-  .livro img {
-    width: 250px;
-  }
-
-  .info-livro {
-    width: 80px;
-    padding: 5px;
-    font-size: 12px;
-  }
-
-  .destaques h3 {
-    font-size: 18px;
-  }
-
-  .destaques .scroll {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
 </style>
+
 <body>
   <?php include "header.php"; ?>
   <section class="categorias">
@@ -207,7 +209,7 @@
           explicabo delectus, laboriosam architecto libero minima culpa
           expedita placeat eveniet ut?
         </p>
-        <a href="catalogo.php?search=fantasia" >Saiba Mais</a>
+        <a href="catalogo.php?search=fantasia">Saiba Mais</a>
       </div>
     </div>
   </main>
@@ -218,12 +220,13 @@
       <h3>Destaques</h3>
       <div class="scroll">
         <?php
-        if (isset($_GET['error'])){
-          if ($_GET['error'] = "id-não-fornecido"){
+        if (isset($_GET['error'])) {
+          if ($_GET['error'] = "id-não-fornecido") {
             echo "<script>alert('Não foi pssivel encontrar esse id!! Tente novamente!!')</script>";
           }
         }
-        function getLivro($info){
+        function getLivro($info)
+        {
           return [
             "id" => $info['id']  ?? "indefinida",
             "nome" => $info['nome'] ?? "indefinida",
@@ -233,9 +236,9 @@
             "capa" => $info['capa'] ?? "indefinida"
           ];
         }
-          $json = json_decode(file_get_contents("destaque.json"), true);
+        $json = json_decode(file_get_contents("destaque.json"), true);
         for ($i = 0; $i < count($json["destaque"]); $i++) {
-            $info = $json["destaque"][$i];
+          $info = $json["destaque"][$i];
           $book = getLivro($info);
           $id = $book['id'];
           $nome = $book['nome'];
@@ -248,7 +251,7 @@
                   src="' . $capa . '"
                   alt="Capa do livro"  style="width: 200px;"/></a>
                   </div>';
-                  echo $objeto;
+          echo $objeto;
         }
         ?>
       </div>
@@ -258,8 +261,8 @@
       <div class="scroll">
         <?php
 
-$json_romance = json_decode(file_get_contents("destaque.json"), true);
-          for ($n = 0; $n < count($json_romance["romance"]); $n++) {
+        $json_romance = json_decode(file_get_contents("destaque.json"), true);
+        for ($n = 0; $n < count($json_romance["romance"]); $n++) {
 
           $info_romance = $json_romance["romance"][$n];
           $book_romance = getLivro($info_romance);
@@ -274,8 +277,8 @@ $json_romance = json_decode(file_get_contents("destaque.json"), true);
                   src="' . $capa_romance . '"
                   alt="Capa do livro"  style="width: 200px;"/></a>
                   </div>';
-                  echo $objeto_romance;
-        } 
+          echo $objeto_romance;
+        }
         ?>
       </div>
     </div>
@@ -316,7 +319,7 @@ $json_romance = json_decode(file_get_contents("destaque.json"), true);
   ?>
   <script>
     function categoria(categoria) {
-      document.location.href = "catalogo.php?search=" +   categoria
+      document.location.href = "catalogo.php?search=" + categoria
     }
   </script>
 </body>

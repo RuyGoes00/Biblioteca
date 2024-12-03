@@ -14,7 +14,6 @@
   <link rel="shortcut icon" href="style/assets/favicon.ico" type="image/x-icon">
   <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
   <script type="text/javascript">
-    
     google.books.load();
 
     function initialize() {
