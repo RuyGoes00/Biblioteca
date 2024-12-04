@@ -18,7 +18,7 @@
         <section class="profile">
             <h2>Meu Perfil</h2>
             <div class="profile-info">
-                <img src="profile-placeholder.jpg" alt="Foto de perfil">
+                <img src="style/assets/perfil.jfif" alt="Foto de perfil">
                 <div>
                     <h3>Nome do Usuário</h3>
                     <p>Email: usuario@email.com</p>

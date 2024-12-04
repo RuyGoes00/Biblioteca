@@ -24,6 +24,13 @@
     google.books.setOnLoadCallback(initialize);
   </script>
 </head>
+<?php 
+//var_dump(empty($_GET['id']));
+  if (empty($_GET['id'])){
+    $last = $_SERVER["HTTP_REFERER"];
+    header("location: $last&error=indisponivel");
+  }
+?>
 
 <body>
   <div id="viewerCanvas" style="width: 100vw; height: 100vh"></div>

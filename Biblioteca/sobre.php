@@ -102,7 +102,7 @@
     <main>
         <article>
             <figure>
-                <img src="style/assets/Biblioteca.jpeg" alt="Biblioteca BookOn">
+                <img src="style/assets/Biblioteca.jpeg" alt="Biblioteca BookOn" style="height: 300px">
                 <figcaption>A biblioteca BookOn</figcaption>
             </figure>
             <p>A biblioteca BookOn foi criada no ano de 1988. Seu criador, Ruy Alvares de Oliveira, era um vendedor ambulante que ia de bairro em bairro vendendo livros para crianças que, de vez em quando, pediam para Ruy ler com eles. Ruy já estava com 59 anos e não conseguia mais fazer seu trabalho como antigamente.</p>

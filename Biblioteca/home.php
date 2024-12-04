@@ -290,23 +290,23 @@
       <div class="row-autores">
 
         <div class="autor">
-          <a href=""><img src="style/assets/clarice_1peq.png" alt=""></a>
+          <a href="catalogo.php?search=Clarice Lispector"><img src="style/assets/clarice_1peq.png" alt=""></a>
           <h1>Clarice Lispector</h1>
         </div>
         <div class="autor">
-          <a href=""><img src="style/assets/nxMWV9YJInGirE6.jpg" alt=""></a>
+          <a href="catalogo.php?search=Bianca Santana"><img src="style/assets/nxMWV9YJInGirE6.jpg" alt=""></a>
           <h1>Bianca Santana</h1>
         </div>
         <div class="autor">
-          <a href=""><img src="style/assets/machado_de_assis_real.jpg.webp" alt=""></a>
-          <h1>Macahdo de Assis</h1>
+          <a href="catalogo.php?search=Machado de Assis"><img src="style/assets/machado_de_assis_real.jpg.webp" alt=""></a>
+          <h1>Machado de Assis</h1>
         </div>
         <div class="autor">
-          <a href=""><img src="style/assets/richard-russell-rick-riordan-jr.jpg" alt=""></a>
+          <a href="catalogo.php?search=Richard Russel"><img src="style/assets/richard-russell-rick-riordan-jr.jpg" alt=""></a>
           <h1>Richard Russel</h1>
         </div>
         <div class="autor">
-          <a href=""><img src="style/assets/jkrowling-facebook-skst82b7hrg1.webp" alt=""></a>
+          <a href="catalogo.php?search=J. K. Rowling"><img src="style/assets/jkrowling-facebook-skst82b7hrg1.webp" alt=""></a>
           <h1>J. K. Rowling</h1>
         </div>
 

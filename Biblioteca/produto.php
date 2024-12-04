@@ -164,8 +164,8 @@
     exit;
   } else {
   }
-  if ($_GET['id']) {
-    $id = $_GET['id'];
+    if ($_GET['id']) {
+      $id = $_GET['id'];
     $page = file_get_contents("https://www.googleapis.com/books/v1/volumes/$id?key=AIzaSyDipEexZymPc2FvmqFCT9gbUcbHBp0TwbE");
 
     if (isset($page)) {
@@ -188,7 +188,7 @@
         } else {
           $autor = "indefinida";
         }
-
+        
         if (isset($dados['volumeInfo']['industryIdentifiers'][0]['identifier'])) {
           $isbn = $dados['volumeInfo']['industryIdentifiers'][0]['identifier'];
         } else {
@@ -240,14 +240,19 @@
           <p class="nome-editora"><?= $editora ?></p>
           <p class="isbn"><?= $isbn ?></p>
           <?php
-          $id_visualização = "";
-          if (isset($dados['accessInfo']['epub']['acsTokenLink'])) {
+          if ($dados['accessInfo']['accessViewStatus'] !== "NONE") {
             $id_visualização = $id;
           } else {
-            echo "<script>Alert('Este livro não está disponivel para leitura!!')</script>";
+            $id_visualização = "";
           }
+          if (isset($_GET['error'])){
 
-          ?>
+            if ($_GET['error'] == "indisponivel"){
+              echo "<script>alert('Esse livro não está disponivel para visualização')</script>";
+            }
+          }
+            ?>
+          
           <script>
             function redirectAddFav() {
               document.location.href = "add_favorito.php?id=<?= $id ?>";

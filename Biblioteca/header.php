@@ -30,7 +30,7 @@
     <nav>
         <a href="home.php">Home</a>
         <a href="catalogo.php?search=Harry-Potter ">Catálogo</a>
-        <a href="sobre.html">Sobre</a>
+        <a href="sobre.php">Sobre</a>
         <a href="Conta.php">Minha Conta</a>
     </nav>
     <div class="shop-cart">
